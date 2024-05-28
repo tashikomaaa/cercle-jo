@@ -9,9 +9,9 @@ const PORT = process.env.PORT || 3001;
 // Middleware pour parser le corps des requêtes en JSON
 app.use(bodyParser.json());
 
-
+console.log(process.env.MONGODB_SERVER,)
 // Connexion à MongoDB
-mongoose.connect(process.env.mongodb, {
+mongoose.connect(process.env.MONGODB_SERVER, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(() => {
