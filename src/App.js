@@ -1,8 +1,34 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
+import { GoogleMap, LoadScript, Marker, InfoWindow } from 'google-maps-react';
 import './App.css';
 
+
+const API_KEY = 'YOUR_GOOGLE_MAPS_API_KEY';
+
 function App() {
+  const [userPosition, setUserPosition] = useState(null);
+  const [signalPosition, setSignalPosition] = useState(null);
+
+  useEffect(() => {
+    // Get user's current position
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        setUserPosition({
+          lat: position.coords.latitude,
+          lng: position.coords.longitude,
+        });
+      },
+      (error) => {
+        console.error('Error getting user position:', error);
+      }
+    );
+  }, []);
+
+  const handleSignalClick = () => {
+    setSignalPosition(userPosition);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -19,6 +45,37 @@ function App() {
           Learn React
         </a>
       </header>
+
+
+
+
+      <LoadScript googleMapsApiKey={API_KEY}>
+        <GoogleMap
+          mapContainerStyle={{ height: '400px', width: '100%' }}
+          center={userPosition}
+          zoom={15}
+        >
+          {userPosition && (
+            <Marker position={userPosition}>
+              <InfoWindow>
+                <div>Your current position</div>
+              </InfoWindow>
+            </Marker>
+          )}
+
+          {signalPosition && (
+            <Marker position={signalPosition} icon={{ url: '/signal.png' }}>
+              <InfoWindow>
+                <div>Signal position</div>
+              </InfoWindow>
+            </Marker>
+          )}
+        </GoogleMap>
+      </LoadScript>
+
+      <button onClick={handleSignalClick} style={{ position: 'absolute', bottom: '20px', right: '20px' }}>
+        Signal Activity
+      </button>
     </div>
   );
 }
