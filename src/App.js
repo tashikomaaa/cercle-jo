@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Vous est offert par <a href="https://lecercle.community/">Le Cercle</a> 
         </a>
       </header>
     </div>
