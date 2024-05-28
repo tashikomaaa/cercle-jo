@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
-import { GoogleMap, LoadScript, Marker, InfoWindow } from 'google-maps-react';
+import GoogleMapReact from 'google-maps-react';
 import './App.css';
 
 
-const API_KEY = 'YOUR_GOOGLE_MAPS_API_KEY';
+const API_KEY = process.env.API_KEY;
+
+
 
 function App() {
   const [userPosition, setUserPosition] = useState(null);
@@ -47,31 +49,18 @@ function App() {
       </header>
 
 
-
-
-      <LoadScript googleMapsApiKey={API_KEY}>
-        <GoogleMap
+        <GoogleMapReact
+          bootstrapURLKeys={API_KEY}
           mapContainerStyle={{ height: '400px', width: '100%' }}
           center={userPosition}
           zoom={15}
-        >
-          {userPosition && (
-            <Marker position={userPosition}>
-              <InfoWindow>
-                <div>Your current position</div>
-              </InfoWindow>
-            </Marker>
-          )}
+        > 
 
           {signalPosition && (
-            <Marker position={signalPosition} icon={{ url: '/signal.png' }}>
-              <InfoWindow>
-                <div>Signal position</div>
-              </InfoWindow>
-            </Marker>
+            <GoogleMapReact.Marker position={signalPosition} icon={{ url: '/signal.png' }}>
+            </GoogleMapReact.Marker>
           )}
-        </GoogleMap>
-      </LoadScript>
+        </GoogleMapReact>
 
       <button onClick={handleSignalClick} style={{ position: 'absolute', bottom: '20px', right: '20px' }}>
         Signal Activity
@@ -80,4 +69,4 @@ function App() {
   );
 }
 
-export default App;
+export default App
