@@ -16,7 +16,7 @@ function App() {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    Vous est offert par Le Cercle
+                    Vous est offert par la communauté du Cercle
                 </a>
             </header>
         </div>
