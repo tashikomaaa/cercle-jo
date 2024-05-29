@@ -50,6 +50,7 @@ function App() {
 
 
         <GoogleMapReact
+          google={window.google}
           bootstrapURLKeys={API_KEY}
           mapContainerStyle={{ height: '400px', width: '100%' }}
           center={userPosition}
