@@ -12,32 +12,37 @@ import { createCoords } from '../core/index';
 const ButtonComponent = () => {
     const [value, setValue] = useState(0);
     const { position } = useContext(PositionContext);
+
+    const handleCreateCoords = async (newValue) => {
+        setValue(newValue);
+        switch (newValue) {
+            case 0:
+                return '0';
+            case 1:
+                // code that we will 'try' to run
+                await createCoords(position)
+                    .then(function (response) {
+                        // handle success
+                        console.log(response);
+                    })
+                    .catch(function (error) {
+                        // handle error
+                        console.log(error);
+                    })
+                return;
+            case 2:
+                return '2';
+            default:
+                break;
+        }
+    }
+
     return (
         <Box sx={{ width: '100%' }}>
             <BottomNavigation
                 showLabels
                 value={value}
-                onChange={(event, newValue) => {
-                    setValue(newValue);
-                    switch (newValue) {
-                        case 0:
-                            return '0';
-                        case 1:
-                            // code that we will 'try' to run
-                            let res = createCoords(position)
-                                .then(function (response) {
-                                    // handle success
-                                    console.log(response);
-                                })
-                                .catch(function (error) {
-                                    // handle error
-                                    console.log(error);
-                                })
-                            return;
-                        case 2:
-                            return '2';
-                    }
-                }}
+                onChange={async (event, newValue) => await handleCreateCoords(newValue)}
                 style={{ position: 'relative', bottom: 0, left: 0, right: 0 }}
                 size="60px"
             >
