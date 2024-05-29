@@ -1,17 +1,13 @@
 import React from 'react';
 import logo from './assets/images/logo/logo.png';
 import './App.css';
-import GMapComponent from './components/map';
-
+import MapComponent from './components/map';
 function App() {
     return (
         <div className="App">
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>src/App.js</code> and save to reload.
-                </p>
-                <GMapComponent />
+                <MapComponent />
                 <a
                     className="App-link"
                     href="https://lecercle.community/"

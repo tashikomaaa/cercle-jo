@@ -8,9 +8,11 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "express": "^4.19.2",
+    "leaflet": "^1.9.4",
     "mongoose": "^8.4.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-leaflet": "^4.2.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
     "workbox-background-sync": "^6.6.0",
@@ -27,7 +29,7 @@
     "workbox-streams": "^6.6.0"
   },
   "scripts": {
-    "start": " PORT=6001 react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
