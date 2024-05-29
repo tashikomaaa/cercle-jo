@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
+import { PositionProvider } from './core/context/PositionContext';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -9,9 +10,11 @@ import { ReactPWAInstallProvider } from 'react-pwa-install';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <ReactPWAInstallProvider enableLogging>
-            <App />
-        </ReactPWAInstallProvider>
+        <PositionProvider>
+            <ReactPWAInstallProvider enableLogging>
+                <App />
+            </ReactPWAInstallProvider>
+        </PositionProvider>
     </React.StrictMode>
 );
 serviceWorkerRegistration.register({

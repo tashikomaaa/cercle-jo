@@ -1,4 +1,5 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, useContext } from "react";
+import { PositionContext } from '../core/context/PositionContext';
 import {
     MapContainer, TileLayer, Marker, Popup,
 } from 'react-leaflet';
@@ -6,8 +7,9 @@ import "leaflet/dist/leaflet.css";
 
 const MapComponent = () => {
     const mapRef = useRef(null);
-
+    const { setPosition } = useContext(PositionContext);
     const [userLocation, setUserLocation] = useState([48.866667, 2.333333]);
+
     useEffect(() => {
         // if geolocation is supported by the users browser
         if (navigator.geolocation) {
@@ -18,6 +20,7 @@ const MapComponent = () => {
                     const { latitude, longitude } = position.coords;
                     // update the value of userlocation variable
                     setUserLocation([latitude, longitude]);
+                    setPosition([latitude, longitude]);
                 },
                 // if there was an error getting the users location
                 (error) => {

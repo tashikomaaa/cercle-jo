@@ -8,6 +8,9 @@ const listCoords = async () => {
 }
 
 const createCoords = async (args) => {
+  console.log("in create Coords:")
+  console.log(args)
+
   return await _axios_coords.post(args)
 }
 
