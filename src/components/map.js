@@ -11,9 +11,6 @@ const MapComponent = () => {
     const mapRef = useRef(null);
     const position = [48.866667, 2.333333];
 
-
-
-
     return (
         <div>
             <div style={{ position: 'relative', height: '65vh', width: '100vw' }}>

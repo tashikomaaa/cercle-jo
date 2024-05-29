@@ -40,7 +40,7 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <div>
+                <div style={{display: 'flex'}}>
                     <img src={logo} className="App-logo" alt="logo" />
                     {supported() && !isInstalled() && (
                         <Button
@@ -57,16 +57,6 @@ function App() {
                 </div>
             </header>
             <MapComponent />
-            <Button
-                variant="contained"
-                color="primary"
-                href="https://lecercle.community/"
-                target="_blank"
-                rel="noopener noreferrer"
-                id="app_button"
-            >
-                Vous est offert par la communauté du Cercle
-            </Button>
         </div>
     );
 }

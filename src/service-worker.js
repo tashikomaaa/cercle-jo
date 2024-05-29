@@ -68,16 +68,5 @@ self.addEventListener('message', (event) => {
         self.skipWaiting();
     }
 });
-serviceWorkerRegistration.register({
-    onUpdate: (e) => {
-        const { waiting: { postMessage = null } = {}, update } = e || {};
-        if (postMessage) {
-            postMessage({ type: 'SKIP_WAITING' });
-        }
-        update().then(() => {
-            window.location.reload();
-        });
-    },
-});
 
 // Any other custom service worker logic can go here.

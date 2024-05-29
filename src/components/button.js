@@ -18,7 +18,7 @@ const ButtonComponent = () => {
                 onChange={(event, newValue) => {
                     setValue(newValue);
                 }}
-                style={{ position: 'relative', bottom: 0, left: 0, right: 0}}
+                // style={{ position: 'relative', bottom: 0, left: 0, right: 0}}
                 size="60px"
             >
             <BottomNavigationAction icon={<AddReactionIcon />} id="add-reaction-icon" />
