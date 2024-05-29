@@ -1,23 +1,12 @@
 import React from 'react';
 import logo from './assets/images/logo/cerclejo.png';
+import littleLogo from './assets/images/logo/littlecercle.png';
 import './App.css';
 import MapComponent from './components/map';
 import { useReactPWAInstall } from "react-pwa-install";
-import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import BrowserUpdatedIcon from '@mui/icons-material/BrowserUpdated';
 
-const VisuallyHiddenInput = styled('input')({
-    clip: 'rect(0 0 0 0)',
-    clipPath: 'inset(50%)',
-    height: 1,
-    overflow: 'hidden',
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    whiteSpace: 'nowrap',
-    width: 1,
-});
 function App() {
     const { pwaInstall, supported, isInstalled } = useReactPWAInstall();
     function getMobileOperatingSystem() {
@@ -39,7 +28,7 @@ function App() {
     const handleClick = () => {
         pwaInstall({
             title: "Installer Le Cercle-JO",
-            logo: logo,
+            logo: littleLogo,
             description: "",
         })
             .then(() => {
