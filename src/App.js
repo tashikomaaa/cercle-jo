@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './assets/images/logo/logo.png';
 import './App.css';
+import GMapComponent from './components/map';
 
 function App() {
     return (
@@ -10,6 +11,7 @@ function App() {
                 <p>
                     Edit <code>src/App.js</code> and save to reload.
                 </p>
+                <GMapComponent />
                 <a
                     className="App-link"
                     href="https://lecercle.community/"
