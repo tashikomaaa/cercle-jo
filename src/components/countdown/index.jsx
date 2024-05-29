@@ -33,7 +33,7 @@ class Countdown extends React.Component {
                     {days && (
                         <div className="countdown-item">
                             {days}
-                            <span>jours avants les JO's</span>
+                            <span>jours avant les JO's</span>
                         </div>
                     )}
                 </div>
