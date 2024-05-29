@@ -1,5 +1,4 @@
-import { ListCoords } from './coords';
-import { createCoords } from './coords';
+import { listCoords, createCoords } from './coords';
 
-export { ListCoords };
+export { listCoords };
 export { createCoords };
