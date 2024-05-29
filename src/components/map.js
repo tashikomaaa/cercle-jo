@@ -3,6 +3,7 @@ import {
     MapContainer, TileLayer, Marker, Popup,
 } from 'react-leaflet';
 import "leaflet/dist/leaflet.css";
+import './map.css';
 
 
 import ButtonComponent from "./button";
