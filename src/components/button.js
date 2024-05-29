@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import Box from '@mui/material/Box';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import AddReactionIcon from '@mui/icons-material/AddReaction';
@@ -11,14 +12,14 @@ const ButtonComponent = () => {
     const [value, setValue] = useState(0);
 
     return (
-        <div>
+        <Box sx={{ width: '100%' }}>
             <BottomNavigation
                 showLabels
                 value={value}
                 onChange={(event, newValue) => {
                     setValue(newValue);
                 }}
-                // style={{ position: 'relative', bottom: 0, left: 0, right: 0}}
+                style={{ position: 'relative', bottom: 0, left: 0, right: 0}}
                 size="60px"
             >
             <BottomNavigationAction icon={<AddReactionIcon />} id="add-reaction-icon" />
@@ -26,7 +27,7 @@ const ButtonComponent = () => {
             <BottomNavigationAction icon={<AllInclusiveIcon />} id="all-inclusive-icon" />
 
             </BottomNavigation>
-        </div>
+        </Box>
     );
 };
 

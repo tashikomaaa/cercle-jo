@@ -25,3 +25,34 @@
     width: 100%;
     text-transform: none;
 }
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+
+.countdown-wrapper {
+    display: flex;
+    height: 5rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.countdown-item {
+    color: #111;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 30px;
+    margin: 10px;
+    padding-top: 10px;
+    position: relative;
+}
+
+.countdown-item span {
+    color: #333;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
