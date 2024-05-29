@@ -59,7 +59,7 @@ function App() {
                         )}
                     </div>
                 </header>
-                <Countdown timeTillDate="07 26 2024, 6:00 am" timeFormat="MM DD YYYY, h:mm a" />
+                <Countdown timeTillDate="07 26 2024 00:00:00" timeFormat="MM DD YYYY, h:mm a" />
                 <MapComponent />
                 <ButtonComponent />
             </Box>

@@ -39,14 +39,12 @@
 
 .countdown-item {
     color: #111;
-    font-size: 40px;
+    font-size: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     line-height: 30px;
-    margin: 10px;
-    padding-top: 10px;
     position: relative;
 }
 
