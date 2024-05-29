@@ -63,7 +63,7 @@ function App() {
                 href="https://lecercle.community/"
                 target="_blank"
                 rel="noopener noreferrer"
-                sx={{ width: '100%', height: '15vw', textTransform: 'none' }}
+                id="app_button"
             >
                 Vous est offert par la communauté du Cercle
             </Button>

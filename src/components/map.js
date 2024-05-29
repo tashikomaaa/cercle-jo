@@ -30,8 +30,7 @@ const MapComponent = () => {
                 </MapContainer>
             </div>
             <div>
-            <ButtonComponent />
-            
+                <ButtonComponent />
             </div>
         </div>
     );
