@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Cercle-JO",
+  "name": "Crcle-JO",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,9 +8,14 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo.png",
+      "src": "cerclejo.png",
       "type": "image/png",
-      "sizes": "620x569"
+      "sizes": "192x192"
+    },
+    {
+      "src": "cerclejo.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
   "start_url": ".",
