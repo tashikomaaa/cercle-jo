@@ -56,10 +56,10 @@ app.get('/coords', async (req, res) => {
 
   // Récuperations des coords
   try {
-    await Coords.find({}).exec();
-    res.status(200).json({ message: 'Coordonnées GPS enregistrées avec succès' });
+    const result = await Coords.find({}).exec();
+    res.status(200).json({ message: 'Coordonnées GPS récupéré succès', result: result });
   } catch (error) {
-    res.status(500).json({ error: 'Erreur lors de l\'enregistrement des coordonnées GPS' });
+    res.status(500).json({ error: 'Erreur lors de la récupération des coordonnées GPS' });
   }
 });
 
