@@ -1,6 +1,6 @@
 {
-  "short_name": "Cercle JO",
-  "name": "Cercle JO",
+  "short_name": "Cercle-JO",
+  "name": "Crcle-JO",
   "icons": [
     {
       "src": "favicon.ico",
@@ -10,7 +10,12 @@
     {
       "src": "logo.png",
       "type": "image/png",
-      "sizes": "620x569"
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
   "start_url": ".",
