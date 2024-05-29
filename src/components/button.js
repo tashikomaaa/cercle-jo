@@ -1,13 +1,7 @@
 import React, { useState } from 'react';
 
-import Button from '@mui/material/Button';
-import Snackbar from '@mui/material/Snackbar';
-import Alert from '@mui/material/Alert';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import RestoreIcon from '@mui/icons-material/Restore';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
 import AddReactionIcon from '@mui/icons-material/AddReaction';
 import WarningIcon from '@mui/icons-material/Warning';
 import AllInclusiveIcon from '@mui/icons-material/AllInclusive';
