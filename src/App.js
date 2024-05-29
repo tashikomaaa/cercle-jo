@@ -57,14 +57,16 @@ function App() {
                 </div>
             </header>
             <MapComponent />
-            <a
-                className="App-link"
+            <Button
+                variant="contained"
+                color="primary"
                 href="https://lecercle.community/"
                 target="_blank"
                 rel="noopener noreferrer"
+                id="app_button"
             >
                 Vous est offert par la communauté du Cercle
-            </a>
+            </Button>
         </div>
     );
 }
