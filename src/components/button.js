@@ -19,7 +19,6 @@ const ButtonComponent = () => {
             case 0:
                 return '0';
             case 1:
-                // code that we will 'try' to run
                 await createCoords(position)
                     .then(function (response) {
                         // handle success
