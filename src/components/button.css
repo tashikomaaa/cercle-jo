@@ -1,14 +1,19 @@
 #add-reaction-icon {
     background-color: #D5F5E3;
     color: #2ECC71;
+    border-radius: 5%;
 }
 
 #warning-icon {
     background-color: red;
     color: #FFF;
+    border-radius: 5%;
+
 }
 
 #all-inclusive-icon {
     background-color: #FAE5D3;
     color: #E67E22;
+    border-radius: 5%;
+
 }
