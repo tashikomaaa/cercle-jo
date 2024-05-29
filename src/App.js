@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './assets/images/logo/logo.png';
+import logo from './assets/images/logo/cerclejo.png';
 import './App.css';
 import MapComponent from './components/map';
 import { useReactPWAInstall } from "react-pwa-install";
