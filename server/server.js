@@ -1,6 +1,7 @@
 const express = require('express');
 const session = require('express-session');
 const dotenv = require('dotenv');
+var cors = require('cors');
 dotenv.config();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
@@ -10,6 +11,7 @@ const PORT = process.env.PORT || 3001;
 
 // Middleware pour parser le corps des requêtes en JSON
 app.use(bodyParser.json());
+app.use(cors());
 
 console.log(process.env.MONGODB_SERVER,)
 // Connexion à MongoDB
