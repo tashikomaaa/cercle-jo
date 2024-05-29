@@ -19,6 +19,17 @@ function App() {
                     Vous est offert par la communauté du Cercle
                 </a>
             </header>
+            <MapComponent />
+            <Button
+                variant="contained"
+                color="primary"
+                href="https://lecercle.community/"
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{ width: '100%', height: '15vw', textTransform: 'none' }}
+            >
+                Vous est offert par la communauté du Cercle
+            </Button>
         </div>
     );
 }
