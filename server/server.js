@@ -63,6 +63,33 @@ app.get('/coords', async (req, res) => {
   }
 });
 
+// Définition du schéma Mongoose
+const postScheme = new mongoose.Schema({
+  installed: Boolean,
+  device: String
+});
+// Modèle Mongoose basé sur le schémas
+const PostInstallModel = mongoose.model('post-install', postScheme);
+
+// Endpoint enrgistrer des stats device
+app.post('/post-install', async (req, res) => {
+  // Récupère les données envoyées dans le corps de la requête
+  const { installed, device } = req.body;
+
+  // Vérifie que les données
+  if (!installed || !device) {
+    return res.status(400).json({ error: 'Données devices manquantes' });
+  }
+
+  // Crée un nouvel enregistrement dans la base de données
+  try {
+    await PostInstallModel.create({ installed, device });
+    res.status(200).json({ message: 'Nouveau device sauvegardé' });
+  } catch (error) {
+    res.status(500).json({ error: 'Erreur lors de l\'enregistrement du device' });
+  }
+});
+
 // Démarrer le serveur
 app.listen(PORT, () => {
   console.log(`Serveur backend démarré sur le port ${PORT}`);
