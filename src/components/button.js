@@ -37,12 +37,12 @@ const ButtonComponent = () => {
     }
 
     return (
-        <Box sx={{ width: '100%' }}>
+        <Box sx={{ width: '100%', position: "stiky" }}>
             <BottomNavigation
                 showLabels
                 value={value}
                 onChange={async (event, newValue) => await handleCreateCoords(newValue)}
-                style={{ position: 'relative', bottom: 0, left: 0, right: 0 }}
+                style={{ position: 'stiky', bottom: 0, left: 0, right: 0 }}
                 size="60px"
             >
                 <BottomNavigationAction icon={<AddReactionIcon />} id="add-reaction-icon" />
