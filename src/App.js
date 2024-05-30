@@ -8,7 +8,6 @@ import ButtonComponent from './components/button';
 import { useReactPWAInstall } from "react-pwa-install";
 import Button from '@mui/material/Button';
 import BrowserUpdatedIcon from '@mui/icons-material/BrowserUpdated';
-import Countdown from './components/countdown'
 function App() {
     const { pwaInstall, supported, isInstalled } = useReactPWAInstall();
     function getMobileOperatingSystem() {
@@ -59,7 +58,6 @@ function App() {
                         )}
                     </div>
                 </header>
-                <Countdown timeTillDate="07 26 2024 00:00:00" timeFormat="MM DD YYYY, h:mm a" />
                 <MapComponent />
                 <ButtonComponent />
             </Box>
