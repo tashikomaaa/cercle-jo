@@ -38,12 +38,14 @@ function App() {
             .catch(() => { });
     };
 
-    return (
+    
+
+    return process.env.OPEN ? (
         <div className="App">
             <Box>
                 <header className="App-header">
                     <div style={{ display: 'flex' }}>
-                        <img src={logo} className="App-logo" alt="logo" />
+
                         {supported() && !isInstalled() && (
                             <Button
                                 component="label"
@@ -62,7 +64,45 @@ function App() {
                 <ButtonComponent />
             </Box>
         </div>
-    );
+    ) : (
+        <main>
+            <ul class="game-cards">
+                <li>
+                    <div class="game-card">
+                        <div class="game-card__front">
+                            <div class="game-card__header">
+                                <div class="game-card__cover">
+                                    <div class="game-card__image-placeholder">
+                                        <img src={logo} id="logo" alt="logo" />
+                                    </div>
+                                    <span class="game-card__cover-badge new" aria-hiddden="true">New</span>
+                                </div>
+                                <div class="game-card__title">Cercle-JO</div>
+                                <button class="game-card__touch-target" aria-label="expand"></button>
+                            </div>
+                        </div>
+
+                        <div class="game-card__back">
+                            <div class="game-card__content">
+                                <div class="game-card__metadata">
+                                    <i class="fa fa-clock" aria-hidden="true"></i>
+                                    Ouverture le 26 Juillet 2024
+                                </div>
+                                <div class="game-card__buttons">
+                                    {supported() && !isInstalled() && (
+                                        <button className="game-card__button -download" onClick={handleClick}>
+                                            <i className="fa fa-download" aria-hidden="true"></i>
+                                            Installer
+                                        </button>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </main>
+    )
 }
 
 export default App;
