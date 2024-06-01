@@ -341,7 +341,7 @@ p {
     transition: transform 250ms ease;
 }
 
-/* .game-card__image-placeholder {
+.game-card__image-placeholder {
     display: block;
     background: #7c4dff;
     background-image: linear-gradient(-70deg, rgba(0, 0, 0, 0.15) 60%, transparent 60%), linear-gradient(-20deg, rgba(0, 0, 0, 0.15) 50%, transparent 50%), linear-gradient(40deg, rgba(0, 0, 0, 0.15) 60%, transparent 60%), linear-gradient(-50deg, rgba(0, 0, 0, 0.15) 15%, transparent 15%), linear-gradient(137.42deg, #aa00ff 0%, #7c4dff 50.43%, #304ffe 100%);
@@ -354,7 +354,7 @@ p {
 
 .game-card__image-placeholder.three {
     background-image: linear-gradient(-75deg, rgba(0, 0, 0, 0.15) 60%, transparent 60%), linear-gradient(-25deg, rgba(0, 0, 0, 0.15) 53%, transparent 53%), linear-gradient(30deg, rgba(0, 0, 0, 0.15) 60%, transparent 60%), linear-gradient(-55deg, rgba(0, 0, 0, 0.15) 15%, transparent 15%), linear-gradient(137.42deg, #aa00ff 0%, #7c4dff 50.43%, #304ffe 100%);
-} */
+} 
 
 .game-card__title {
     flex: 0 1 auto;
