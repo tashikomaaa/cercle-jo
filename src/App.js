@@ -38,14 +38,14 @@ function App() {
             .catch(() => { });
     };
 
-    
+
 
     return process.env.OPEN ? (
         <div className="App">
             <Box>
                 <header className="App-header">
                     <div style={{ display: 'flex' }}>
-
+                        <img src={logo} className="App-logo" alt="logo" />
                         {supported() && !isInstalled() && (
                             <Button
                                 component="label"
