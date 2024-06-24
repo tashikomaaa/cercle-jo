@@ -4,7 +4,8 @@ Petit projet pour les jo de paris afin d'aider les usagers pietons à naviger av
 
 Issue et créer avec le coeur depuis [Le Cercle](https://lecercle.community/)
 
-
+Vous alez avoir besoin [nodejs](https://nodejs.org/en)
+et de [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
 ## License
 
